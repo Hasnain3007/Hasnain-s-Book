@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Post</title>
+    <link rel="stylesheet" href="createpost.css">
+</head>
+<body>
+    <div class="post-container">
+        <h2>Create a New Post</h2>
+            <div class="container">
+                <label for="postTitle">Post Title:</label>
+            <input type="text" id="postTitle" name="postTitle" placeholder="Enter your title" required>
+
+            <label for="postContent">Content:</label>
+            <textarea id="postContent" name="postContent" rows="10" placeholder="Write your content here..." required></textarea>
+
+            <label for="postImage">Select Image:</label>
+            <input type="file" id="postImage" name="postImage" accept="image/*">
+
+            <button id="publish">Publish</button>
+            </div>
+    </div>
+</body>
+<script type="module" src="createpost.js"></script>
+</html>
