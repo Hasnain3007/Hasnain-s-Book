@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.3.0/firebase-app.js";
-import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.3.0/firebase-auth.js";
+import { getAuth, onAuthStateChanged,signOut } from "https://www.gstatic.com/firebasejs/10.3.0/firebase-auth.js";
 import { getFirestore,collection, addDoc } from "https://www.gstatic.com/firebasejs/10.3.0/firebase-firestore.js";
 
 const firebaseConfig = {
@@ -28,6 +28,7 @@ var postTitle = document.getElementById('postTitle')
 var postContent = document.getElementById('postContent')
 var postImage = document.getElementById('postImage')
 var publish = document.getElementById('publish')
+var logoutBTN = document.getElementById('logout')
 
 async function addingDataToFireStore() {
     try {
@@ -44,3 +45,13 @@ async function addingDataToFireStore() {
 }
 
 publish.addEventListener('click',addingDataToFireStore)
+
+function logOut() {
+signOut(auth).then(() => {
+  // Sign-out successful.
+}).catch((error) => {
+  window.location.href = 'index.html'
+});
+}
+
+logoutBTN.addEventListener('click',logOut)

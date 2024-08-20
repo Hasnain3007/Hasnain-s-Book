@@ -22,17 +22,21 @@
 
 body {
   margin: 0;
+  padding: 0;
   font-family: 'Poppins', sans-serif;
   background-color: rgb(255, 128, 0) !important;
+  display: flex;
+  flex-direction: column;
 }
 
 .navbar {
+  width: 100%;
   background-color: #1a1a1a;
   padding: 1rem 0;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 2;
 }
 
 #container {
@@ -239,6 +243,11 @@ button:focus:before {
 footer{
   background-color: black;
   color: rgb(255, 128, 0) !important;
+}
+.footerRow{
+  
+  display: flex !important;
+  justify-content: center !important;
 }
 footer a i{
   color: rgb(255, 128, 0) !important;
